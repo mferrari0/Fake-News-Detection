@@ -11,8 +11,8 @@ In this notebook I train 4 different NLP models for the detection of fake news f
 ## The dataset
 The dataset, containing news headlines, is collected from two news websites:
 
-- TheOnion: sarcastic versions of current events.
-- HuffPost: real (and non-sarcastic) news headlines.
+- TheOnion: sarcastic versions of current events (https://www.theonion.com/).
+- HuffPost: real (and non-sarcastic) news headlines (https://www.huffpost.com/).
 
 Each record consists of three attributes: 
 - is_sarcastic: 1 if the record is sarcastic (0 otherwise) 
@@ -24,7 +24,7 @@ Each record consists of three attributes:
 
 ## Technologies and Methods  
 
-<img src="https://i.imgur.com/cllEHm0.png" width="1000" height="300">
+<img src="https://i.imgur.com/cllEHm0.png" width="1000" height="200">
 
 
 - NLP
@@ -72,7 +72,7 @@ Fasttext embedding is a word to vector model: it represents each word as a vecto
 
 <img src="https://skimai.com/wp-content/uploads/2020/03/Screen-Shot-2020-04-13-at-5.59.33-PM.png" width="700" height="300">
 
-BERT is a family of masked-language models published in 2018 by researchers at Google. It has become a ubiquitous baseline in NLP experiments counting over 150 research publications analyzing and improving the model. SMALL BERT is a faster and ligher variation of BERT for quick training and deployment. It has only 2 endoders. I downloaded the pre-trained model from the Tensorflow Hub and fine-tuned it with my dataset.
+BERT is a family of masked-language models published in 2018 by researchers at Google. It has become a ubiquitous baseline in NLP experiments counting over 150 research publications analyzing and improving the model. SMALL BERT is a faster and ligher variation of BERT for quick training and deployment. It has only 2 encoders. I downloaded the pre-trained model from the Tensorflow Hub and fine-tuned it with my dataset.
 SMALL BERT seems to be too simple for this task: Accuracy is around **84%**.
 Additional details on the model and its use can be found here: https://www.tensorflow.org/text/tutorials/classify_text_with_bert
 
@@ -100,3 +100,4 @@ Additional details on the model and its use can be found here:  https://huggingf
 ### Further steps: 
   - try other transformer-based models available from either the Tensorflow Hub or Huggingface
   - try finetuning GPT-3
+ 
